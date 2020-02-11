@@ -1,2 +1,0 @@
-# trabajo
-diana esto es
