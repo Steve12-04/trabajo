@@ -7,11 +7,31 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        #cont_mensajes{width: 50%; background: blue; border: solid 2px black}
+        p{background: white; padding: 5px; border: solid 1px black; margin: 10px;border-radius: 5px;}
+    </style>
+    <h3>Ingresar</h3>
+    <form id="login_form" >
+        <input type="text" name=""placeholder="Correo" id="correo">
+        <input type="text" name=""placeholder="Usuario" id="usuario">
+        <input type="button" value="entrar" onclick="loguear()"> 
+    </form>
+    
+    <hr>
+    <div id="cont_mensajes">
+        
+    </div><br>
+    <div style="display: flex;justify-content: flex-start;align-items: center;">
+        <textarea name="" id="mensaje"placeholder="mensaje" style="width: 500px;"></textarea>
+        <button id="enviar_mensajes" style="height: 100%;background: skyblue;color: whitesmoke;padding:10px">Enviar</button>
+    </div>
+
+<hr>
     <h1>socket.io</h1>
     <script src="jquery-3.4.1.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-        const socket = io.connect();
-    </script>
+    <script src="funciones_socket.js"></script>
+    
 </body>
 </html>
