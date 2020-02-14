@@ -15,7 +15,7 @@
     <form id="login_form" >
         <input type="text" name=""placeholder="Correo" id="correo">
         <input type="text" name=""placeholder="Usuario" id="usuario">
-        <input type="button" value="entrar" onclick="loguear()"> 
+        <input type="button" value="entrar" onclick="ingresar()"> 
     </form>
     
     <hr>
@@ -24,7 +24,7 @@
     </div><br>
     <div style="display: flex;justify-content: flex-start;align-items: center;">
         <textarea name="" id="mensaje"placeholder="mensaje" style="width: 500px;"></textarea>
-        <button id="enviar_mensajes" style="height: 100%;background: skyblue;color: whitesmoke;padding:10px">Enviar</button>
+        <button id="enviar_mensajes"onclick="enviar_msjs()" style="height: 100%;background: skyblue;color: whitesmoke;padding:10px">Enviar</button>
     </div>
 
 <hr>
@@ -32,6 +32,16 @@
     <script src="jquery-3.4.1.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="funciones_socket.js"></script>
-    
+    <script>
+        function ingresar(){
+            correo = $('#login_form #correo').val();
+            usuario = $('#login_form #usuario').val();
+            loguear(correo,usuario);
+        }
+        function enviar_msjs(){
+            mensaje = $('#mensaje').val();
+            enviar_msj(usuario,mensaje)
+        }
+    </script>
 </body>
 </html>
